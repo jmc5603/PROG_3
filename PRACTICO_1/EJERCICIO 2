@@ -1,0 +1,31 @@
+EJERCICIO 2:
+
+	Considerando la implementación de la Lista realizado en el ejercicio anterior, comparar la
+	complejidad computacional contra un array en las siguientes operaciones:
+	1.- Insertar al principio.
+	2.- Buscar un elemento en una posición.
+	3.- Determinar la cantidad de elementos.
+	
+	1) COMPLEJIDAD COMPUTACIONAL PARA INSERTAR AL PRINCIPIO => "Array > Lista Dinamica":
+		_LISTA DINAMICA: La complejidad computacional para el caso de la Lista Dinamica es "O(1)" 
+			(siempre se requeriran la misma cantidad de accesos). solo necesitamos colocar nuestro nuevo nodo
+			en la variable "primerNodo/first" de la lista e incorporar en su referencia al anterior primer nodo.
+		
+		_ARRAY: La complejidad computacional para el Array tradicional es bastante elevada. Esto se debe a que se necesita liberar
+			la primera casilla del arreglo realizando un corrimiento de un espacio a la vez, para luego introducir el nuevo nodo.
+			Se necesitan de muchos accesos y modificaciones en la memoria para realizar esta operacion.
+			
+	2) COMPLEJIDAD COMPUTACIONAL PARA BUSCAR ELEMENTO SEGUN POS => "Array < Lista Dinamica":
+		_LISTA DINAMICA: Los nodos al estar dispersos en la memoria, y no estar ubicados de forma secuencial,
+			necesitamos de recorrerlos uno por uno para poder obtener al que necesitamos. Su complejidad depende
+			de la cantidad de nodos en la lista, por lo que se lo consideraría "O(n)".
+		_ARRAY: Todos los nodos estan ubicados de forma secuencial dentro de la memoria, por lo que es muy facil poder ubicarlos
+			(solo se necesita realizar una pequenia suma segun la posicion que queremos obtener). 
+			Su complejidad se considera "O(1)".
+			
+	3) COMPLEJIDAD COMPUTACIONAL PARA DETERMINAR CANTIDAD DE NODOS/ELEMENTOS => "Array = Lista Dinamica":
+		_LISTA DINAMICA: Tenemos dos formas de realizar esta operacion. La forma mas eficiente seria crear una variable
+			que represente el tamanio de la lista e ir sumando 1 por cada nodo que se agrega. asi podriamos ahorrarnos recorrerlos
+			a todos.
+		_ARRAY: Para poder crear un arreglo siempre necesitaremos especificar en el momento la cantidad de elementos que tendra,
+			y asi reservar la memoria necesaria.
